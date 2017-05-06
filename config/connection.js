@@ -2,7 +2,7 @@
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-  port: 3000,
+  port: 3306,
   host: "localhost",
   user: "root",
   password: "DKMitt!#!#1313",
@@ -16,7 +16,6 @@ connection.connect(function(err) {
     return;
   }
   console.log("connected as id: " + connection.threadId);
-  console.log("Listening on port: " + connection.port);
 });
 
 // Export connection for our ORM to use.
